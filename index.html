@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>다희의 포트폴리오</title>
+    <meta name="description" content="Portfolio for webdesigner Dahee" />
+    <meta name="auther" content="Dahee" />
+    <link rel="shortcut icon" href="images/logo.svg" type="image/x-icon" />
+    <meta property="og:title" content="다희의 포트폴리오" />
+    <meta property="og:type" content="Website" />
+    <meta property="og:url" content="배포후 생성된 URL" />
+    <meta property="og:image" content="배포후에 생성된 이미지 URL" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet" />
+    <!--Font Awesome  -->
+    <script src="https://kit.fontawesome.com/03cea40a8a.js" crossorigin="anonymous"></script>
+    <!-- Typeit -->
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+    <!-- Anime.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <!--CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Javascript -->
+    <script type="module" src="src/main.js" defer></script>
+    <script type="module" src="src/projects.js" defer></script>
+    <script type="module" src="src/active_menu.js" defer></script>
+    <script type="module" src="src/type.js" defer></script>
+    <script type="module" src="src/vanilla-tilt.js" defer></script>
+    <script type="module" src="src/overlay.js" defer></script>
+    <script type="module" src="src/testimonials.js" defer></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header__logo">
+        <a href="#"><img class="header__logo__img" src="images/logo.svg" alt="logo" /></a>
+      </div>
+      <nav class="header__nav">
+        <ul class="header__menu">
+          <li><a class="header__menu__item active" href="#home">Home</a></li>
+          <li><a class="header__menu__item" href="#about">About</a></li>
+          <li><a class="header__menu__item" href="#skills">Skills</a></li>
+          <li><a class="header__menu__item" href="#work">My work</a></li>
+          <li><a class="header__menu__item" href="#design">Design</a></li>
+          <li><a class="header__menu__item" href="#testimonial">Testimonials</a></li>
+          <li><a class="header__menu__item" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="header__toggle" aria-label="navigation menu toggle">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </header>
+    <!-- main -->
+    <main>
+      <!-- Home -->
+      <section id="home">
+        <div class="home__container">
+          <div class="home__text_wrapper">
+            <strong class="home__text">DAHEE</strong>
+            <strong class="home__text">DAHEE</strong>
+          </div>
+          <h2 class="home__title" aria-label="Hello, I'm web-publisher dahee">
+            Hello <br />
+            I&#39;m <strong class="home__title--strong">Web-publisher</strong>, Dahee
+          </h2>
+          <a class="home__contact" href="#contact">Contact</a>
+        </div>
+      </section>
+      <!-- About -->
+      <section id="about" class="section max-container" data-scroll>
+        <h2 class="title">About me</h2>
+        <p class="description">항상 배우며 발전하는 모습을 지향합니다.</p>
+        <div class="about__wrapper">
+          <div class="about__profile">
+            <div class="about__profile-pic">
+              <img src="images/me.svg" alt="me" />
+            </div>
+            <div class="about__profile-text">
+              <h3 class="subtitle">💁🏻‍♀️ PROFILE</h3>
+              <ul class="about__lists">
+                <li>정다희</li>
+                <li>1996. 04. 01</li>
+                <li>010.8239.5523</li>
+                <li>dhjl13@naver.com</li>
+              </ul>
+            </div>
+          </div>
+          <div class="about__license-study">
+            <div class="about__license">
+              <h3 class="subtitle">🏅 LICENSE</h3>
+              <ul class="about__lists">
+                <li class="about__list">
+                  <span>2021. 11</span>
+                  <span>포토샵 1급</span>
+                </li>
+                <li class="about__list">
+                  <span>2021. 09</span>
+                  <span>웹디자인 기능사</span>
+                </li>
+              </ul>
+            </div>
+            <div class="about__study">
+              <h3 class="subtitle">📚 STUDY</h3>
+              <ul class="study__lists">
+                <li class="study__list">
+                  <span>2023. 10 &#11;-&#31; 2024. 03</span>
+                  <span>코드잇스프린트 <br />&#40;프론트엔드 과정&#41;</span>
+                </li>
+                <li class="study__list">
+                  <span>2021. 04 &#11;-&#31; 2021. 08</span>
+                  <span>더조은아카데미 <br />&#40;웹디자인&#38;웹퍼블리셔 과정&#41;</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="about__jobs">
+            <h3 class="subtitle">💻 JOBS</h3>
+            <ul class="jobs">
+              <li class="job">
+                <img class="job__logo" src="images/shinhan-logo.svg" alt="shinhan logo" />
+                <div>
+                  <p class="job__name">크레아이디 - 신한은행 차세대 프로젝트</p>
+                  <p class="job__period">2022.01 ~ 2022.06 (프리랜서)</p>
+                </div>
+              </li>
+              <li class="job">
+                <img class="job__logo" src="images/motioneye-logo.svg" alt="motioneye logo" />
+                <div>
+                  <p class="job__name">모션아이 - 유지보수 및 프로젝트 구축</p>
+                  <p class="job__period">2022.09 ~ 2023.09 (정규직)</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <ul class="majors">
+          <li class="major">
+            <i class="fa-brands fa-html5 major__icon"></i>
+            <p class="major__title">publish</p>
+            <p class="major__description">HTML, CSS, SCSS, Javascript, Jquery, TypeScript, React</p>
+          </li>
+          <li class="major">
+            <i class="fa-solid fa-pen-nib major__icon"></i>
+            <p class="major__title">design</p>
+            <p class="major__description">Photoshop, Illustrator, Figma</p>
+          </li>
+          <li class="major">
+            <i class="fa-solid fa-note-sticky major__icon"></i>
+            <p class="major__title">plan</p>
+            <p class="major__description">Figma, PowerPoint</p>
+          </li>
+        </ul>
+      </section>
+      <!-- Skills -->
+      <section id="skills" class="section" data-scroll>
+        <div class="max-container">
+          <h2 class="title">My Skills</h2>
+          <p class="description">나의 스킬과 능력</p>
+          <div class="skills">
+            <section class="skills__coding">
+              <h3 class="skills__title">Coding skills</h3>
+              <ul>
+                <li class="bar">
+                  <div class="bar__metadata"><span>HTML</span><span>98%</span></div>
+                  <div class="bar__bg"><div class="bar__value" data-width="98%" style="width: 0"></div></div>
+                  <p class="bar__description">웹표준의 기본 개념을 숙지하고 있으며, 태그 명령어 코딩이 가능합니다.</p>
+                </li>
+                <li class="bar">
+                  <div class="bar__metadata"><span>CSS</span><span>90%</span></div>
+                  <div class="bar__bg"><div class="bar__value" data-width="90%" style="width: 0"></div></div>
+                  <p class="bar__description">다양한 CSS 선택자를 사용하여 디자인 표현작업이 가능합니다.</p>
+                </li>
+                <li class="bar">
+                  <div class="bar__metadata"><span>JavaScript & Jquery</span><span>80%</span></div>
+                  <div class="bar__bg"><div class="bar__value" data-width="80%" style="width: 0"></div></div>
+                  <p class="bar__description">사용자 정의 함수를 이해하고 일부 소스 분석과 편집 할 수 있습니다.</p>
+                </li>
+                <li class="bar">
+                  <div class="bar__metadata"><span>TypeScript</span><span>70%</span></div>
+                  <div class="bar__bg"><div class="bar__value" data-width="80%" style="width: 0"></div></div>
+                  <p class="bar__description">버그를 줄이기 위해 TypeScript를 사용하여 변수 유형, 함수 반환 유형 및 매개변수 유형을 정의할 수 있습니다.</p>
+                </li>
+                <li class="bar">
+                  <div class="bar__metadata"><span>React</span><span>50%</span></div>
+                  <div class="bar__bg"><div class="bar__value" data-width="50%" style="width: 0"></div></div>
+                  <p class="bar__description">재사용 가능한 구성 요소, 상태 관리 및 후크를 사용하여 UI/UX를 동적으로 구성할 수 있습니다.</p>
+                </li>
+                <li class="bar">
+                  <div class="bar__metadata"><span>UIUX Design</span><span>85%</span></div>
+                  <div class="bar__bg"><div class="bar__value" data-width="85%" style="width: 0"></div></div>
+                  <p class="bar__description">아이콘 및 UIUX디자인을 제작할 수 있으며, 프로토타입을 설계 할 수 있습니다.</p>
+                </li>
+              </ul>
+            </section>
+            <section class="skills__tools">
+              <h3 class="skills__title">Tools</h3>
+              <ul class="skills__lists">
+                <li class="skills__list">
+                  <img class="skills__img" src="images/visualstudio.svg" alt="visualstudio" />
+                  <span> Visual Studio Code</span>
+                </li>
+                <li class="skills__list">
+                  <img class="skills__img" src="images/w5.svg" alt="Websquare" />
+                  <span>Websquare</span>
+                </li>
+                <li class="skills__list">
+                  <img class="skills__img" src="images/ps.svg" alt="photoshop" />
+                  <span>Photoshop</span>
+                </li>
+                <li class="skills__list">
+                  <img class="skills__img" src="images/ai.svg" alt="illustrator" />
+                  <span>Illustrator</span>
+                </li>
+                <li class="skills__list">
+                  <img class="skills__img" src="images/figma.svg" alt="figma" />
+                  <span>Figma</span>
+                </li>
+              </ul>
+            </section>
+            <section class="skills__etc">
+              <h3 class="skills__title">Etc</h3>
+              <ul class="skills__lists">
+                <li class="skills__list">
+                  <img class="skills__img" src="images/github.svg" alt="github" />
+                  <span>Git</span>
+                </li>
+                <li class="skills__list">
+                  <img class="skills__img" src="images/scss.svg" alt="scss" />
+                  <span>Scss</span>
+                </li>
+                <li class="skills__list">
+                  <img class="skills__img" src="images/math.svg" alt="math" />
+                  <span>Math</span>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </section>
+      <!-- Work -->
+      <section id="work" class="section" data-scroll>
+        <div class="max-container">
+          <h2 class="title">My Work</h2>
+          <p class="description">포트폴리오 & 프로젝트</p>
+          <ul class="categories">
+            <li>
+              <button class="category category--selected" data-category="all">All <span class="category-count">8</span></button>
+            </li>
+            <li>
+              <button class="category" data-category="publish">Publish<span class="category-count">5</span></button>
+            </li>
+            <li>
+              <button class="category" data-category="uiux">UIUX<span class="category-count">3</span></button>
+            </li>
+          </ul>
+          <ul class="projects">
+            <li class="project" data-type="publish">
+              <a href="https://dahee0401.github.io/sampyo/" target="_blank">
+                <img src="images/sampyo.png" alt="sampyo" class="project__img" />
+                <div class="project__metadata">
+                  <h3 class="project__title">SAMPYO</h3>
+                  <p class="project__description">Clone Coding with HTML, CSS, JS</p>
+                </div>
+              </a>
+            </li>
+            <li class="project" data-type="publish">
+              <a href=" https://dahee0401.github.io/ppaikdabang/" target="_blank">
+                <img src="images/ppaik.png" alt="ppaik" class="project__img" />
+                <div class="project__metadata">
+                  <h3 class="project__title">PPAIK</h3>
+                  <p class="project__description">Clone Coding with HTML, CSS, JS</p>
+                </div>
+              </a>
+            </li>
+            <li class="project" data-type="publish">
+              <a href="https://dahee0401.github.io/kakao/" target="_blank">
+                <img src="images/kakao.png" alt="kakao" class="project__img" />
+                <div class="project__metadata">
+                  <h3 class="project__title">KAKAO</h3>
+                  <p class="project__description">Clone Coding with HTML, SCSS, JS</p>
+                </div>
+              </a>
+            </li>
+            <li class="project" data-type="publish">
+              <a href="https://dahee0401.github.io/090factory/" target="_blank">
+                <img src="images/foctory.png" alt="factory" class="project__img" />
+                <div class="project__metadata">
+                  <h3 class="project__title">FACTORY</h3>
+                  <p class="project__description">Clone Coding with HTML, CSS, JS</p>
+                </div>
+              </a>
+            </li>
+            <li class="project" data-type="publish">
+              <a href="https://campaign.unhcr.or.kr/main.do" target="_blank">
+                <img src="images/unhr.png" alt="unhr" class="project__img" />
+                <div class="project__metadata">
+                  <h3 class="project__title">UNHR</h3>
+                  <p class="project__description">Procjects with HTML, CSS, JS, Plugin</p>
+                </div>
+              </a>
+            </li>
+            <li class="project" data-type="uiux">
+              <a href="https://www.figma.com/design/AWv3TEGCAgUUpYPJLSCg5X/%ED%95%A0%EC%9D%BC%EA%B4%80%EB%A6%AC%EC%95%B1?node-id=0-1&t=sQAF2rqrFLEkPXSz-1" target="_blank">
+                <img src="images/todo-app.png" alt="todo app" class="project__img" />
+                <div class="project__metadata">
+                  <h3 class="project__title">Todo management Application</h3>
+                  <p class="project__description">Procjects with Figma</p>
+                </div>
+              </a>
+            </li>
+            <li class="project" data-type="uiux">
+              <a href="https://www.figma.com/design/EIyDZnuH78X3csIhiAdnD8/%EC%9D%8C%EC%95%85%EC%95%B1?node-id=0-1&t=FYDDxjc62s0O8B82-1" target="_blank">
+                <img src="images/music-app.png" alt="music app" class="project__img" />
+                <div class="project__metadata">
+                  <h3 class="project__title">Music Application</h3>
+                  <p class="project__description">Procjects with Figma</p>
+                </div>
+              </a>
+            </li>
+            <li class="project" data-type="uiux">
+              <a href="https://www.figma.com/design/2rz8ner1cFWNOxrAQYTfEG/%EC%87%BC%ED%95%91%EB%AA%B0?node-id=0-1&t=TUj668TWgc8Bxu0K-1" target="_blank">
+                <img src="images/shoppingmall-app.png" alt="shoppingmall app" class="project__img" />
+                <div class="project__metadata">
+                  <h3 class="project__title">Shopping Application</h3>
+                  <p class="project__description">Procjects with Figma</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- Design -->
+      <section id="design" class="section" data-scroll>
+        <div class="max-container">
+          <h2 class="title">Design Contents</h2>
+          <p class="description">그래픽 디자인 카드</p>
+          <ul class="box_gallery_row">
+            <li class="gallery__thumbnail thumb1" style="transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1); will-change: transform">
+              <div class="gallery__thumbnail_content">
+                <h3>Promotion Event</h3>
+                <p>Photoshop</p>
+              </div>
+              <a target="_blank" href="./images/big1.jpg">
+                <img src="./images/design1.png" alt="갤러리_썸네일1" />
+              </a>
+            </li>
+            <li class="gallery__thumbnail thumb2" style="transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1); will-change: transform">
+              <div class="gallery__thumbnail_content">
+                <h3>Detail page</h3>
+                <p>Photoshop</p>
+              </div>
+              <a target="_blank" href="./images/big2.jpg">
+                <img src="./images/design2.png" alt="갤러리_썸네일2" />
+              </a>
+            </li>
+            <li class="gallery__thumbnail thumb3" style="transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1); will-change: transform">
+              <div class="gallery__thumbnail_content">
+                <h3>Card News</h3>
+                <p>Photoshop</p>
+              </div>
+              <a target="_blank" href="./images/big3.jpg">
+                <img src="./images/design3.png" alt="갤러리_썸네일3" />
+              </a>
+            </li>
+            <li class="gallery__thumbnail thumb4" style="transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1); will-change: transform">
+              <div class="gallery__thumbnail_content">
+                <h3>Banner design</h3>
+                <p>Photoshop</p>
+              </div>
+              <a target="_blank" href="./images/big4.jpg">
+                <img src="./images/design4.png" alt="갤러리_썸네일4" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <div id="overlay">
+        <div class="container">
+          <ul class="slide">
+            <li>
+              <img class="gallery__big_photo" src="" alt="갤러리사진" />
+            </li>
+          </ul>
+          <button class="close">
+            <i class="fa-solid fa-circle-xmark"></i>
+          </button>
+        </div>
+      </div>
+      <!-- Testimonials -->
+      <section id="testimonial" class="section" data-scroll>
+        <div class="max-container">
+          <h2 class="title">Testimonial</h2>
+          <p class="description">동료들의 나에 대한 평가</p>
+          <div class="slider">
+            <div class="slide__buttons">
+              <button class="prev" aria-label="prev-button"></button>
+              <button class="next" aria-label="next-button"></button>
+            </div>
+            <div class="slide_wrapper">
+              <div class="slide__wrapper_header">
+                <ul class="btns">
+                  <li class="btn red"><i class="fa-solid fa-xmark"></i></li>
+                  <li class="btn yellow"><i class="fa-solid fa-window-minimize"></i></li>
+                  <li class="btn green"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></li>
+                </ul>
+              </div>
+              <div class="slide__bubble active">
+                <div class="testimonial">
+                  <blockquote class="testimonial__talk">해결 못했던 부분을 스스로 해결하려고 하고, 처음엔 미흡한 부분도 있었지만 실력이 점점 느는거 같다. 내가 몰랐던 툴도 덕분에 빨리 알 수 있었다. 프론트엔드 공부도 하면 잘 할 것 같다!</blockquote>
+                  <p class="author">
+                    박대리님
+                    <span class="author-depart">웹퍼블리셔</span>
+                  </p>
+                </div>
+                <div class="person">
+                  <img src="images/puppy-1.svg" alt="Author Image" />
+                </div>
+              </div>
+              <div class="slide__bubble">
+                <div class="testimonial">
+                  <blockquote class="testimonial__talk">열심히 하는 모습이 좋다. 앞으로 더 성장할 것이다. 서로 도우면서 몰랐던 부분을 함께 공유하며 해결하여 좋았다.</blockquote>
+                  <p class="author">
+                    김팀장님
+                    <span class="author-depart">웹퍼블리셔</span>
+                  </p>
+                </div>
+                <div class="person">
+                  <img src="images/puppy-3.svg" alt="Author Image" />
+                </div>
+              </div>
+              <div class="slide__bubble">
+                <div class="testimonial">
+                  <blockquote class="testimonial__talk">재미있고, 유쾌한 사원이다. 의사소통이 잘되며, 사원중에서는 제일 편하게 대하게 지내게 된다.</blockquote>
+                  <p class="author">
+                    전대리님
+                    <span class="author-depart">웹퍼블리셔</span>
+                  </p>
+                </div>
+                <div class="person">
+                  <img src="images/puppy-2.svg" alt="Author Image" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Arrow up -->
+      <aside>
+        <a class="arrow-up" href="#home" title="back to top">
+          <i class="fa-solid fa-arrow-up"></i>
+        </a>
+      </aside>
+    </main>
+    <!-- Footer -->
+    <footer id="contact" class="section" data-scroll>
+      <div class="max-container">
+        <h2 class="title">Let&#39;s talk</h2>
+        <p class="description">ekgml5233@gmail.com</p>
+        <ul class="contact__links">
+          <li>
+            <a href="https://github.com/dahee0401" target="_blank" title="my github link" class="contact__link">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:ekgml5233@gmail.com" target="_blank" title="my email link" class="contact__link">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.notion.so/208113ab63144e85b5534fb6f3e88a5e" target="_blank" title="my study blog" class="contact__link notion-ico">
+              <i class="notion"></i>
+            </a>
+          </li>
+        </ul>
+        <p>©Dahee - All rights reserved</p>
+      </div>
+    </footer>
+  </body>
+</html>
