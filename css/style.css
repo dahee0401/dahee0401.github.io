@@ -831,11 +831,11 @@ button:focus {
 }
 .prev {
   left: 0;
-  background-image: url("/images/arrow-left.svg");
+  background-image: url("./../images/arrow-left.svg");
 }
 .next {
   right: 0;
-  background-image: url("/images/arrow-right.svg");
+  background-image: url("./../images/arrow-right.svg");
 }
 .prev:focus,
 .next:focus {
@@ -1003,7 +1003,7 @@ button:focus {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 3.2rem;
-  background-image: url(/images/notion.svg);
+  background-image: url("./../images/notion.svg");
   transition: all 250ms ease-in;
 }
 
@@ -1011,7 +1011,7 @@ button:focus {
   color: var(--color-accent);
 }
 .notion-ico:hover .notion {
-  background-image: url(/images/notion_accent.svg);
+  background-image: url("./../images/notion_accent.svg");
 }
 /* 반응형 : 1200px */
 @media screen and (max-width: 1200px) {
