@@ -12,8 +12,28 @@ const options = {
 const observer = new IntersectionObserver(observerCallback, options);
 sections.forEach((section) => observer.observe(section));
 
+navItems.forEach((item, index) => {
+  item.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    document.querySelector(sectionIds[index]).scrollIntoView({ behavior: "smooth" });
+
+    selectNavItem(index);
+
+    setTimeout(() => {
+      observerCallback([
+        {
+          target: document.querySelector(sectionIds[index]),
+          isIntersecting: true,
+          intersectionRatio: 1,
+        },
+      ]);
+    }, 100);
+  });
+});
+
 function observerCallback(entries) {
-  let selectLastOne;
+  let selectLastOne = false;
   entries.forEach((entry) => {
     const index = sectionIds.indexOf(`#${entry.target.id}`);
     visibleSections[index] = entry.isIntersecting;
@@ -25,7 +45,7 @@ function observerCallback(entries) {
         opacity: [0, 1],
         translateY: [30, 0],
         easing: "easeOutCubic",
-        duration: 800,
+        duration: 400,
       });
     }
 
@@ -78,7 +98,9 @@ function findFirstIntersecting(intersections) {
 function selectNavItem(index) {
   const navItem = navItems[index];
   if (!navItem) return;
-  activeNavItem.classList.remove("active");
-  activeNavItem = navItem;
-  activeNavItem.classList.add("active");
+  if (activeNavItem !== navItem) {
+    activeNavItem.classList.remove("active");
+    activeNavItem = navItem;
+    activeNavItem.classList.add("active");
+  }
 }
