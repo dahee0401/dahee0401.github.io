@@ -297,6 +297,12 @@ button:focus {
   gap: 5rem;
   grid-area: about__profile;
 }
+.about__profile-pic img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  min-width: 16rem;
+}
 .about__license,
 .about__study {
   text-align: left;
@@ -904,8 +910,7 @@ button:focus {
 
 .testimonial {
   width: 92rem;
-  padding: 3.2rem 0 0 0;
-  transform: translateX(10rem);
+  padding: 3.2rem 0 3.2rem 8rem;
   background-size: 8rem;
   background-position: 19% -7%;
   background-repeat: no-repeat;
@@ -1016,9 +1021,6 @@ button:focus {
 }
 /* 반응형 : 1200px */
 @media screen and (max-width: 1200px) {
-  .about__profile-pic img {
-    max-width: 95%;
-  }
   .study__list br {
     display: block;
   }
@@ -1035,7 +1037,9 @@ button:focus {
   .title {
     font-size: 3.2rem;
   }
-
+  .description {
+    font-size: 1.6rem;
+  }
   .header {
     flex-direction: column;
     align-items: start;
@@ -1078,9 +1082,6 @@ button:focus {
       "about__license"
       "about__experience"
       "about__jobs";
-  }
-  .about__profile-pic img {
-    max-width: 80%;
   }
   .about__profile,
   .abouot__license,
@@ -1160,7 +1161,7 @@ button:focus {
   }
   .testimonial {
     width: 100%;
-    padding: 32px 51px;
+    padding: 3.2rem 5rem;
     background-size: 60px;
     transform: translateX(0);
     background-position: top;
