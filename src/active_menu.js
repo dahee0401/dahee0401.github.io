@@ -20,15 +20,13 @@ navItems.forEach((item, index) => {
 
     selectNavItem(index);
 
-    setTimeout(() => {
-      observerCallback([
-        {
-          target: document.querySelector(sectionIds[index]),
-          isIntersecting: true,
-          intersectionRatio: 1,
-        },
-      ]);
-    }, 100);
+    observerCallback([
+      {
+        target: document.querySelector(sectionIds[index]),
+        isIntersecting: true,
+        intersectionRatio: 1,
+      },
+    ]);
   });
 });
 
