@@ -100,6 +100,21 @@ button:focus {
   font-family: var(--font-korea);
 }
 
+.title,
+.description,
+.content {
+  opacity: 0;
+  transform: translateY(20px) scale(0.9);
+  transition: all 0.8s ease-in-out;
+}
+
+.title.visible,
+.description.visible,
+.content.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
 /* Header */
 .header {
   background-color: transparent;

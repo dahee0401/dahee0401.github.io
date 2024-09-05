@@ -48,7 +48,20 @@ function observerCallback(entries) {
         duration: 400,
       });
     }
-
+    const title = entry.target.querySelector(".title");
+    const description = entry.target.querySelector(".description");
+    const content = entry.target.querySelector(".content");
+    if (title && description) {
+      if (entry.isIntersecting) {
+        title.classList.add("visible");
+        description.classList.add("visible");
+        content.classList.add("visible");
+      } else {
+        title.classList.remove("visible");
+        description.classList.remove("visible");
+        content.classList.remove("visible");
+      }
+    }
     if (entry.target.id === "skills") {
       const skillBars = document.querySelectorAll(".bar__value");
       if (entry.isIntersecting) {
