@@ -37,15 +37,6 @@ function observerCallback(entries) {
     visibleSections[index] = entry.isIntersecting;
     selectLastOne = index === sectionIds.length - 1 && entry.isIntersecting && entry.intersectionRatio >= 0.95;
 
-    if (entry.isIntersecting && index !== sectionIds.length - 1) {
-      anime({
-        targets: entry.target,
-        opacity: [0, 1],
-        translateY: [30, 0],
-        easing: "easeOutCubic",
-        duration: 400,
-      });
-    }
     const title = entry.target.querySelector(".title");
     const description = entry.target.querySelector(".description");
     const content = entry.target.querySelector(".content");
