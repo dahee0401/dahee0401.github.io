@@ -6,7 +6,7 @@
     <title>다희의 포트폴리오</title>
     <meta name="description" content="Portfolio for webdesigner Dahee" />
     <meta name="auther" content="Dahee" />
-    <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="images/dahee.svg" type="image/x-icon" />
     <meta property="og:title" content="다희의 포트폴리오" />
     <meta property="og:type" content="Website" />
     <meta property="og:url" content="https://dahee0401.github.io/portfolio2024/" />
@@ -15,7 +15,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet" />
     <!--Font Awesome  -->
     <script src="https://kit.fontawesome.com/03cea40a8a.js" crossorigin="anonymous"></script>
     <!-- Typeit -->
@@ -31,13 +30,12 @@
     <script type="module" src="src/type.js" defer></script>
     <script type="module" src="src/vanilla-tilt.js" defer></script>
     <script type="module" src="src/overlay.js" defer></script>
-    <script type="module" src="src/testimonials.js" defer></script>
   </head>
   <body>
     <!-- Header -->
     <header class="header">
       <div class="header__logo">
-        <a href="#"><img class="header__logo__img" src="images/logo.svg" alt="logo" /></a>
+        <a href="#"><img class="header__logo__img" src="images/dahee.svg" alt="logo" /></a>
       </div>
       <nav class="header__nav">
         <ul class="header__menu">
@@ -46,7 +44,6 @@
           <li><a class="header__menu__item" href="#skills">Skills</a></li>
           <li><a class="header__menu__item" href="#work">My work</a></li>
           <li><a class="header__menu__item" href="#design">Design</a></li>
-          <li><a class="header__menu__item" href="#testimonial">Testimonials</a></li>
           <li><a class="header__menu__item" href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -59,109 +56,97 @@
       <!-- Home -->
       <section id="home">
         <div class="home__container">
-          <div class="home__text_wrapper">
-            <strong class="home__text">DAHEE</strong>
-            <strong class="home__text">DAHEE</strong>
-          </div>
           <h2 class="home__title" aria-label="Hello, I'm web-publisher dahee">
             Hello <br />
             I&#39;m <strong class="home__title--strong">Web-publisher</strong>, Dahee
           </h2>
           <a class="home__contact" href="#contact">Contact</a>
         </div>
+        <div class="bg">
+          <div class="bg-inner">
+            <video loop="" autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
+              <source src="https://assets.website-files.com/63f5d378a903c2a12583ce2f/64132dde932dbe26445541a5_BG-transcode.mp4" data-wf-ignore="true" />
+              <source src="https://assets.website-files.com/63f5d378a903c2a12583ce2f/64132dde932dbe26445541a5_BG-transcode.webm" data-wf-ignore="true" />
+            </video>
+          </div>
+        </div>
       </section>
       <!-- About -->
-      <section id="about" class="section max-container" data-scroll>
-        <h2 class="title">About me</h2>
-        <p class="description">항상 배우며 발전하는 모습을 지향합니다.</p>
-        <div class="content">
-          <div class="about__wrapper">
-            <div class="about__profile">
-              <div class="about__profile-pic">
-                <img src="images/me.svg" alt="me" />
-              </div>
-              <div class="about__profile-text">
-                <h3 class="subtitle">💁🏻‍♀️ PROFILE</h3>
-                <ul class="about__lists">
-                  <li>정다희</li>
-                  <li>1996. 04. 01</li>
-                  <li>010.8239.5523</li>
-                  <li>dhjl13@naver.com</li>
-                </ul>
-              </div>
-            </div>
-            <div class="about__license-study">
-              <div class="about__license">
-                <h3 class="subtitle">🏅 LICENSE</h3>
-                <ul class="about__lists">
-                  <li class="about__list">
-                    <span>2021. 11</span>
-                    <span>포토샵 1급</span>
+      <section id="about" class="section" data-scroll>
+        <div class="max-container">
+          <h2 class="title">About me</h2>
+          <div class="content">
+            <ul class="profile">
+              <li class="produce">
+                <p>
+                  안녕하세요!<br />
+                  함께 협력하고 같이 성장하는<br />
+                  웹퍼블리셔 <b>정다희</b> 입니다.<br />
+                  <span>
+                    시멘틱 마크업과 SEO, JS 및 JQ를 활용한 웹 인터렉션 등<br />
+                    퍼블리싱 기술을 사용할 수 있습니다.
+                  </span>
+                </p>
+              </li>
+              <li class="features">
+                <ol>
+                  <li class="about__skills">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <div class="text__wrap">
+                      <h4>탄탄한 기본기</h4>
+                      <p>
+                        Html5, CSS3 스킬을 기본으로한 탄탄한 마크업을 지향합니다. <br />
+                        다양한 유저를 고려하여 웹 접근성 및 크로스 브라우징에 신경쓰고 있습니다.
+                      </p>
+                    </div>
                   </li>
-                  <li class="about__list">
-                    <span>2021. 09</span>
-                    <span>웹디자인 기능사</span>
+                  <li class="about__skills">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <div class="text__wrap">
+                      <h4>협동과 협력</h4>
+                      <p>
+                        다양한 위치의 팀원과 협력하여, 더 좋은 결과물을 만드는데 심혈을 기울입니다.<br />
+                        유지보수 및 더 나은 관리를 위한 React와 SASS에 대한 관심이 많습니다.
+                      </p>
+                    </div>
                   </li>
-                </ul>
-              </div>
-              <div class="about__study">
-                <h3 class="subtitle">📚 STUDY</h3>
-                <ul class="study__lists">
-                  <li class="study__list">
-                    <span>2023. 10 &#11;-&#31; 2024. 03</span>
-                    <span>코드잇스프린트 <br />&#40;프론트엔드 과정&#41;</span>
+                  <li class="about__skills">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <div class="text__wrap">
+                      <h4>포기하지 않는 끈기</h4>
+                      <p>
+                        풀리지 않는 문제에 대해 끊임없이 고민하고 몰두합니다.<br />
+                        포기하지 않고 꾸준히 나아갈 수 있는 끈기를 갖고 있습니다.
+                      </p>
+                    </div>
                   </li>
-                  <li class="study__list">
-                    <span>2021. 04 &#11;-&#31; 2021. 08</span>
-                    <span>더조은아카데미 <br />&#40;웹디자인&#38;웹퍼블리셔 과정&#41;</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="about__jobs">
-              <h3 class="subtitle">💻 JOBS</h3>
-              <ul class="jobs">
-                <li class="job">
-                  <img class="job__logo" src="images/shinhan-logo.svg" alt="shinhan logo" />
-                  <div>
-                    <p class="job__name">크레아이디 - 신한은행 차세대 프로젝트</p>
-                    <p class="job__period">2022.01 ~ 2022.06 (프리랜서)</p>
-                  </div>
-                </li>
-                <li class="job">
-                  <img class="job__logo" src="images/motioneye-logo.svg" alt="motioneye logo" />
-                  <div>
-                    <p class="job__name">모션아이 - 유지보수 및 프로젝트 구축</p>
-                    <p class="job__period">2022.09 ~ 2023.09 (정규직)</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
+                </ol>
+              </li>
+            </ul>
+            <ul class="majors">
+              <li class="major">
+                <i class="fa-brands fa-html5 major__icon"></i>
+                <p class="major__title">publish</p>
+                <p class="major__description">HTML, CSS, SCSS, Javascript, Jquery, TypeScript, React</p>
+              </li>
+              <li class="major">
+                <i class="fa-solid fa-pen-nib major__icon"></i>
+                <p class="major__title">design</p>
+                <p class="major__description">Photoshop, Illustrator, Figma</p>
+              </li>
+              <li class="major">
+                <i class="fa-solid fa-note-sticky major__icon"></i>
+                <p class="major__title">plan</p>
+                <p class="major__description">Figma, PowerPoint</p>
+              </li>
+            </ul>
           </div>
-          <ul class="majors">
-            <li class="major">
-              <i class="fa-brands fa-html5 major__icon"></i>
-              <p class="major__title">publish</p>
-              <p class="major__description">HTML, CSS, SCSS, Javascript, Jquery, TypeScript, React</p>
-            </li>
-            <li class="major">
-              <i class="fa-solid fa-pen-nib major__icon"></i>
-              <p class="major__title">design</p>
-              <p class="major__description">Photoshop, Illustrator, Figma</p>
-            </li>
-            <li class="major">
-              <i class="fa-solid fa-note-sticky major__icon"></i>
-              <p class="major__title">plan</p>
-              <p class="major__description">Figma, PowerPoint</p>
-            </li>
-          </ul>
         </div>
       </section>
       <!-- Skills -->
       <section id="skills" class="section" data-scroll>
         <div class="max-container">
           <h2 class="title">My Skills</h2>
-          <p class="description">나의 스킬과 능력</p>
           <div class="skills content">
             <section class="skills__coding">
               <h3 class="skills__title">Coding skills</h3>
@@ -247,7 +232,6 @@
       <section id="work" class="section" data-scroll>
         <div class="max-container">
           <h2 class="title">My Work</h2>
-          <p class="description">포트폴리오 & 프로젝트</p>
           <div class="content">
             <ul class="categories">
               <li>
@@ -341,7 +325,6 @@
       <section id="design" class="section" data-scroll>
         <div class="max-container">
           <h2 class="title">Design Contents</h2>
-          <p class="description">그래픽 디자인 카드</p>
           <div class="content">
             <ul class="box_gallery_row">
               <li class="gallery__thumbnail thumb1" style="transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1); will-change: transform">
@@ -396,64 +379,6 @@
           </button>
         </div>
       </div>
-      <!-- Testimonials -->
-      <section id="testimonial" class="section" data-scroll>
-        <div class="max-container">
-          <h2 class="title">Testimonial</h2>
-          <p class="description">동료들의 나에 대한 평가</p>
-          <div class="slider content">
-            <div class="slide__buttons">
-              <button class="prev" aria-label="prev-button"></button>
-              <button class="next" aria-label="next-button"></button>
-            </div>
-            <div class="slide_wrapper">
-              <div class="slide__wrapper_header">
-                <ul class="btns">
-                  <li class="btn red"><i class="fa-solid fa-xmark"></i></li>
-                  <li class="btn yellow"><i class="fa-solid fa-window-minimize"></i></li>
-                  <li class="btn green"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></li>
-                </ul>
-              </div>
-              <div class="slide__bubble active">
-                <div class="testimonial">
-                  <blockquote class="testimonial__talk">해결 못했던 부분을 스스로 해결하려고 하고, 처음엔 미흡한 부분도 있었지만 실력이 점점 느는거 같다. 내가 몰랐던 툴도 덕분에 빨리 알 수 있었다. 프론트엔드 공부도 하면 잘 할 것 같다!</blockquote>
-                  <p class="author">
-                    박대리님
-                    <span class="author-depart">웹퍼블리셔</span>
-                  </p>
-                </div>
-                <div class="person">
-                  <img src="images/puppy-1.svg" alt="Author Image" />
-                </div>
-              </div>
-              <div class="slide__bubble">
-                <div class="testimonial">
-                  <blockquote class="testimonial__talk">열심히 하는 모습이 좋다. 앞으로 더 성장할 것이다. 서로 도우면서 몰랐던 부분을 함께 공유하며 해결하여 좋았다.</blockquote>
-                  <p class="author">
-                    김팀장님
-                    <span class="author-depart">웹퍼블리셔</span>
-                  </p>
-                </div>
-                <div class="person">
-                  <img src="images/puppy-3.svg" alt="Author Image" />
-                </div>
-              </div>
-              <div class="slide__bubble">
-                <div class="testimonial">
-                  <blockquote class="testimonial__talk">재미있고, 유쾌한 사원이다. 의사소통이 잘되며, 사원중에서는 제일 편하게 대하게 지내게 된다.</blockquote>
-                  <p class="author">
-                    전대리님
-                    <span class="author-depart">웹퍼블리셔</span>
-                  </p>
-                </div>
-                <div class="person">
-                  <img src="images/puppy-2.svg" alt="Author Image" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
       <!-- Arrow up -->
       <aside>
         <a class="arrow-up" href="#home" title="back to top">

@@ -1,4 +1,4 @@
-const sectionIds = ["#home", "#about", "#skills", "#work", "#design", "#testimonial", "#contact"];
+const sectionIds = ["#home", "#about", "#skills", "#work", "#design", "#contact"];
 const sections = sectionIds.map((id) => document.querySelector(id));
 const navItems = sectionIds.map((id) => document.querySelector(`[href="${id}"]`));
 
@@ -38,16 +38,13 @@ function observerCallback(entries) {
     selectLastOne = index === sectionIds.length - 1 && entry.isIntersecting && entry.intersectionRatio >= 0.95;
 
     const title = entry.target.querySelector(".title");
-    const description = entry.target.querySelector(".description");
     const content = entry.target.querySelector(".content");
-    if (title && description) {
+    if (title) {
       if (entry.isIntersecting) {
         title.classList.add("visible");
-        description.classList.add("visible");
         content.classList.add("visible");
       } else {
         title.classList.remove("visible");
-        description.classList.remove("visible");
         content.classList.remove("visible");
       }
     }
@@ -61,28 +58,6 @@ function observerCallback(entries) {
       } else {
         skillBars.forEach((bar) => {
           bar.style.width = "0";
-        });
-      }
-    }
-
-    if (entry.target.id === "about") {
-      const profilePic = document.querySelector(".about__profile-pic");
-      if (entry.isIntersecting) {
-        anime({
-          targets: profilePic,
-          opacity: [0, 1],
-          translateY: [-100, 0],
-          elasticity: 500,
-          duration: 1000,
-          easing: "easeOutBounce",
-        });
-      } else {
-        anime({
-          targets: profilePic,
-          opacity: [1, 0],
-          translateY: [0, -100],
-          duration: 500,
-          easing: "easeInBack",
         });
       }
     }
