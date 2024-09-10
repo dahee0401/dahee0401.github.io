@@ -1,416 +1,439 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <title>Dahee's Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>다희의 포트폴리오</title>
-    <meta name="description" content="Portfolio for webdesigner Dahee" />
-    <meta name="auther" content="Dahee" />
-    <link rel="shortcut icon" href="images/dahee.svg" type="image/x-icon" />
-    <meta property="og:title" content="다희의 포트폴리오" />
     <meta property="og:type" content="Website" />
+    <meta property="og:title" content="정다희, 2024 포트폴리오" />
     <meta property="og:url" content="https://dahee0401.github.io/portfolio2024/" />
-    <meta property="og:image" content="https://dahee0401.github.io/portfolio2024/images/og.webp" />
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
-    <!--Font Awesome  -->
-    <script src="https://kit.fontawesome.com/03cea40a8a.js" crossorigin="anonymous"></script>
-    <!-- Typeit -->
-    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
-    <!-- Anime.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-    <!--CSS -->
-    <link rel="stylesheet" href="css/style.css" />
-    <!-- Javascript -->
-    <script type="module" src="src/main.js" defer></script>
-    <script type="module" src="src/projects.js" defer></script>
-    <script type="module" src="src/active_menu.js" defer></script>
-    <script type="module" src="src/type.js" defer></script>
-    <script type="module" src="src/vanilla-tilt.js" defer></script>
-    <script type="module" src="src/overlay.js" defer></script>
+    <meta property="og:image" content="https://dahee0401.github.io/assets/img/opengraph.webp" />
+    <meta property="og:description" content="Portfolio" />
+    <meta property="og:site_name" content="정다희의 20204 포트폴리오" />
+    <link rel="shortcut icon" href="./assets/img/dahee.svg" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.22/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.14/lottie.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="./assets/js/js.js" defer></script>
   </head>
   <body>
-    <!-- Header -->
     <header class="header">
-      <div class="header__logo">
-        <a href="#"><img class="header__logo__img" src="images/dahee.svg" alt="logo" /></a>
-      </div>
-      <nav class="header__nav">
-        <ul class="header__menu">
-          <li><a class="header__menu__item active" href="#home">Home</a></li>
-          <li><a class="header__menu__item" href="#about">About</a></li>
-          <li><a class="header__menu__item" href="#skills">Skills</a></li>
-          <li><a class="header__menu__item" href="#work">My work</a></li>
-          <li><a class="header__menu__item" href="#design">Design</a></li>
-          <li><a class="header__menu__item" href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <button class="header__toggle" aria-label="navigation menu toggle">
-        <i class="fa-solid fa-bars"></i>
-      </button>
+      <section class="sc-fixation">
+        <a href="#" class="logo"><span>DH</span></a>
+        <div class="group-producer">
+          <span class="blind">2024년 정다희 제작</span>
+          <span class="left">2024<sub>&copy;</sub></span>
+          <span>—</span>
+          <span>Jeong-dahee All Rights Reserved</span>
+        </div>
+        <div class="time-area">
+          <div class="inner kor">
+            <span class="blind">한국 현재 시간</span>
+            <em>KOR</em>
+            <div class="time" id="koTime">17:39:20</div>
+            <span class="dot"><span class="dot-in"></span></span>
+          </div>
+          <div class="inner nyc">
+            <span class="blind">뉴욕 현재 시간</span>
+            <em>NYC</em>
+            <div class="time" id="nyTime">17:39:20</div>
+            <span class="dot"><span class="dot-in"></span></span>
+          </div>
+        </div>
+        <nav class="gnb">
+          <ul>
+            <li><a href="#scIntro">Intro</a></li>
+            <li><a href="#scAbout">About Me</a></li>
+            <li><a href="#scMain">Main Project</a></li>
+            <li><a href="#scSide">UIUX design</a></li>
+            <li><a href="#scJavascript">JS</a></li>
+            <li><a href="#scContact">Contact</a></li>
+            <li><a href="#scIntro">Go Top</a></li>
+          </ul>
+        </nav>
+        <div class="m-gnb-wrap">
+          <div class="m-gnb">
+            <button class="open" aria-expanded="true">
+              <div class="btn menu">
+                <span>Menu</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 16" fill="none">
+                  <path d="M2 5H18" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M2 11H18" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="btn close">
+                <span>Close</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 16" fill="none">
+                  <path d="M5.00098 3.00098L15.001 13.001" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M5.00098 12.999L15.001 2.99902" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+            </button>
+            <a href="#scIntro" class="talk">
+              <span>Go Top</span>
+            </a>
+          </div>
+        </div>
+        <div class="open-menu">
+          <ul class="m-menu-list">
+            <li class="m-menu-item">
+              <a href="#scIntro">
+                <span>Intro</span>
+                <i>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none"><path d="M3.25 0.5L8.75 6L3.25 11.5" stroke="white" /></svg>
+                </i>
+              </a>
+            </li>
+            <li class="m-menu-item">
+              <a href="#scAbout">
+                <span>About Me</span>
+                <i>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none"><path d="M3.25 0.5L8.75 6L3.25 11.5" stroke="white" /></svg>
+                </i>
+              </a>
+            </li>
+            <li class="m-menu-item">
+              <a href="#scMain">
+                <span>Main Project</span>
+                <i>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none"><path d="M3.25 0.5L8.75 6L3.25 11.5" stroke="white" /></svg>
+                </i>
+              </a>
+            </li>
+            <li class="m-menu-item">
+              <a href="#scSide">
+                <span>UIUX design</span>
+                <i>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none"><path d="M3.25 0.5L8.75 6L3.25 11.5" stroke="white" /></svg>
+                </i>
+              </a>
+            </li>
+            <li class="m-menu-item">
+              <a href="#scJavascript">
+                <span>JavaScript</span>
+                <i>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none"><path d="M3.25 0.5L8.75 6L3.25 11.5" stroke="white" /></svg>
+                </i>
+              </a>
+            </li>
+            <li class="m-menu-item">
+              <a href="#scContact">
+                <span>Contact</span>
+                <i>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12" fill="none"><path d="M3.25 0.5L8.75 6L3.25 11.5" stroke="white" /></svg>
+                </i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
     </header>
-    <!-- main -->
-    <main>
-      <!-- Home -->
-      <section id="home">
-        <div class="home__container">
-          <h2 class="home__title" aria-label="Hello, I'm web-publisher dahee">
-            Hello <br />
-            I&#39;m <strong class="home__title--strong">Web-publisher</strong>, Dahee
-          </h2>
-          <a class="home__contact" href="#contact">Contact</a>
+    <main class="main">
+      <div class="curser-wrap">
+        <div class="curser-inner">
+          <div class="cursor"></div>
+          <i></i>
+        </div>
+        <div class="learn-more">
+          <span>more view</span>
+        </div>
+      </div>
+      <section class="sc-intro" id="scIntro">
+        <h2 class="blind">메인페이지</h2>
+        <div class="content">
+          <div class="group-text">
+            <span class="blind">정다희 2024 포트폴리오</span>
+            <span class="word _1">
+              <span class="char">W</span>
+              <span class="char">e</span>
+              <span class="char">l</span>
+              <span class="char">c</span>
+              <span class="char">o</span>
+              <span class="char">m</span>
+              <span class="char">e</span>
+              <span class="char">&nbsp;</span>
+              <span class="char">t</span>
+              <span class="char">o</span>
+            </span>
+            <span class="word serif">
+              <span class="char">M</span>
+              <span class="char">y</span>
+              <span class="char">&nbsp;</span>
+              <span class="char">P</span>
+              <span class="char">o</span>
+              <span class="char">r</span>
+              <span class="char">t</span>
+              <span class="char">f</span>
+              <span class="char">o</span>
+              <span class="char">l</span>
+              <span class="char">i</span>
+              <span class="char">o</span>
+            </span>
+          </div>
         </div>
         <div class="bg">
           <div class="bg-inner">
             <video loop="" autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
-              <source src="https://assets.website-files.com/63f5d378a903c2a12583ce2f/64132dde932dbe26445541a5_BG-transcode.mp4" data-wf-ignore="true" />
-              <source src="https://assets.website-files.com/63f5d378a903c2a12583ce2f/64132dde932dbe26445541a5_BG-transcode.webm" data-wf-ignore="true" />
+              <source src="./assets/img/universe.mp4" data-wf-ignore="true" />
+              <source src="./assets/img/universe.webm" data-wf-ignore="true" />
             </video>
           </div>
         </div>
       </section>
-      <!-- About -->
-      <section id="about" class="section" data-scroll>
-        <div class="max-container">
-          <h2 class="title">About me</h2>
-          <div class="content">
-            <ul class="profile">
-              <li class="produce">
-                <p>
-                  안녕하세요!<br />
-                  함께 협력하고 같이 성장하는<br />
-                  웹퍼블리셔 <b>정다희</b> 입니다.<br />
-                  <span>
-                    시멘틱 마크업과 SEO, JS 및 JQ를 활용한 웹 인터렉션 등<br />
-                    퍼블리싱 기술을 사용할 수 있습니다.
-                  </span>
-                </p>
-              </li>
-              <li class="features">
-                <ol>
-                  <li class="about__skills">
-                    <i class="fa-solid fa-circle-check"></i>
-                    <div class="text__wrap">
-                      <h4>탄탄한 기본기</h4>
-                      <p>
-                        Html5, CSS3 스킬을 기본으로한 탄탄한 마크업을 지향합니다. <br />
-                        다양한 유저를 고려하여 웹 접근성 및 크로스 브라우징에 신경쓰고 있습니다.
-                      </p>
-                    </div>
-                  </li>
-                  <li class="about__skills">
-                    <i class="fa-solid fa-circle-check"></i>
-                    <div class="text__wrap">
-                      <h4>협동과 협력</h4>
-                      <p>
-                        다양한 위치의 팀원과 협력하여, 더 좋은 결과물을 만드는데 심혈을 기울입니다.<br />
-                        유지보수 및 더 나은 관리를 위한 React와 SASS에 대한 관심이 많습니다.
-                      </p>
-                    </div>
-                  </li>
-                  <li class="about__skills">
-                    <i class="fa-solid fa-circle-check"></i>
-                    <div class="text__wrap">
-                      <h4>포기하지 않는 끈기</h4>
-                      <p>
-                        풀리지 않는 문제에 대해 끊임없이 고민하고 몰두합니다.<br />
-                        포기하지 않고 꾸준히 나아갈 수 있는 끈기를 갖고 있습니다.
-                      </p>
-                    </div>
-                  </li>
-                </ol>
-              </li>
-            </ul>
-            <ul class="majors">
-              <li class="major">
-                <i class="fa-brands fa-html5 major__icon"></i>
-                <p class="major__title">publish</p>
-                <p class="major__description">HTML, CSS, SCSS, Javascript, Jquery, TypeScript, React</p>
-              </li>
-              <li class="major">
-                <i class="fa-solid fa-pen-nib major__icon"></i>
-                <p class="major__title">design</p>
-                <p class="major__description">Photoshop, Illustrator, Figma</p>
-              </li>
-              <li class="major">
-                <i class="fa-solid fa-note-sticky major__icon"></i>
-                <p class="major__title">plan</p>
-                <p class="major__description">Figma, PowerPoint</p>
-              </li>
-            </ul>
-          </div>
+      <section class="sc-about" id="scAbout">
+        <h2>About Me</h2>
+        <p class="top-text">Learning and Developing</p>
+        <div class="bottom-text">
+          <p>안녕하세요! 함께 협력하고 같이 성장하는 웹퍼블리셔 정다희 입니다. 항상 새로운 것을 배우는 것을 좋아하며, 풀리지 않는 문제에 대해 끊임없이 고민하고 몰두합니다. 더 좋은 결과물을 만드는데 심혈을 기울이며 발전적인 모습을 지향합니다.</p>
+          <p>시멘틱 마크업과 SEO, JS 및 JQ를 활용한 웹 인터렉션 등 퍼블리싱 기술과 React로 컴포넌트 및 UIUX를 구현 할 수 있으며, 피그마로 UIUX 디자인을 할 수 있습니다. 다양한 유저를 고려하여 웹 접근성 및 크로스 브라우징에 신경쓰고 있습니다.</p>
         </div>
       </section>
-      <!-- Skills -->
-      <section id="skills" class="section" data-scroll>
-        <div class="max-container">
-          <h2 class="title">My Skills</h2>
-          <div class="skills content">
-            <section class="skills__coding">
-              <h3 class="skills__title">Coding skills</h3>
+      <section class="sc-mainproject">
+        <h2>Main Project</h2>
+        <div class="inner-sticky">
+          <div class="group-item _1" id="scMain">
+            <div class="img-wrap">
+              <div class="cont">
+                <h3><span class="serif">Clones</span>Sampyo</h3>
+                <div class="group-bottom">
+                  <ul class="link-list">
+                    <li>
+                      <a
+                        href="https://dahee0401.github.io/sampyo/
+                                        "
+                        class="link"
+                        target="_blank"
+                      >
+                        <span>GO SITE</span>
+                        <div class="svg-wrap">
+                          <svg width="32" height="32" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M8.15472 2.81673L13.8293 2.82734L13.8399 8.5019L12.758 8.5019L12.8004 4.66229L3.10242 14.3603L2.29631 13.5542L11.9943 3.85618L8.15472 3.89861L8.15472 2.81673Z" fill="currentColor"></path></svg>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                  <ul class="toll-list">
+                    <li><span>기여도: 100%</span></li>
+                    <li><span>#html</span></li>
+                    <li><span>#css</span></li>
+                    <li><span>#jquery</span></li>
+                    <li><span>web standards</span></li>
+                    <li><span>#Sampyo</span></li>
+                  </ul>
+                  <p>jQuery를 사용하였으며 스스로 공부하며 클론코딩한 <span>웹표준형</span>작업입니다</p>
+                </div>
+              </div>
+              <div class="video-wrap">
+                <div class="mask"></div>
+                <video loop="" autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover"><source src="https://uploads-ssl.webflow.com/6481baa8b4e61d7cb8a9f0a0/64980d39c97910472fbfa13f_HeroVideo_04_compressed-transcode.mp4" /></video>
+              </div>
+            </div>
+          </div>
+          <div class="group-item pin _2">
+            <div class="img-wrap">
+              <div class="cont">
+                <h3><span class="serif">Clones</span>ppaikdabang</h3>
+                <div class="group-bottom">
+                  <ul class="link-list">
+                    <li>
+                      <a href="https://dahee0401.github.io/ppaikdabang" target="_blank" class="link">
+                        <span>Go SITE</span>
+                        <div class="svg-wrap">
+                          <svg width="32" height="32" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M8.15472 2.81673L13.8293 2.82734L13.8399 8.5019L12.758 8.5019L12.8004 4.66229L3.10242 14.3603L2.29631 13.5542L11.9943 3.85618L8.15472 3.89861L8.15472 2.81673Z" fill="currentColor"></path></svg>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                  <ul class="toll-list">
+                    <li><span>기여도: 100%</span></li>
+                    <li><span>#html</span></li>
+                    <li><span>#css</span></li>
+                    <li><span>#jquery</span></li>
+                    <li><span>#responsive</span></li>
+                  </ul>
+                  <p>jQuery를 사용하였으며, 유저의 편리성을 고려한 <span>반응형</span>작업입니다</p>
+                </div>
+              </div>
+              <div class="video-wrap">
+                <div class="mask"></div>
+                <video loop="" autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover"><source src="./assets/img/coffee.mp4" /></video>
+              </div>
+            </div>
+          </div>
+          <div class="group-item pin _3">
+            <div class="img-wrap">
+              <div class="cont">
+                <h3><span class="serif">Clones</span>Kakao bank</h3>
+                <div class="group-bottom">
+                  <ul class="link-list">
+                    <li>
+                      <a href="https://dahee0401.github.io/kakao/" target="_blank" class="link">
+                        <span>Go SITE</span>
+                        <div class="svg-wrap">
+                          <svg width="32" height="32" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M8.15472 2.81673L13.8293 2.82734L13.8399 8.5019L12.758 8.5019L12.8004 4.66229L3.10242 14.3603L2.29631 13.5542L11.9943 3.85618L8.15472 3.89861L8.15472 2.81673Z" fill="currentColor"></path></svg>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                  <ul class="toll-list">
+                    <li><span>기여도: 100%</span></li>
+                    <li><span>#html</span></li>
+                    <li><span>#css</span></li>
+                    <li><span>#jquery</span></li>
+                    <li><span>#responsive</span></li>
+                  </ul>
+                  <p>jquery와 css로 다양한 애니메이션과 슬라이드를 만든<span>반응형</span>작업입니다</p>
+                </div>
+              </div>
+              <div class="video-wrap">
+                <div class="mask"></div>
+                <video loop="" autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover"><source src="https://api-www.louvre.fr/sites/default/files/videos/video_2_1_2048/video.mp4" /></video>
+              </div>
+            </div>
+          </div>
+          <div class="group-item pin _4">
+            <div class="img-wrap">
+              <div class="cont">
+                <h3><span class="serif">Create</span>UNHR support</h3>
+                <div class="group-bottom">
+                  <ul class="link-list">
+                    <li>
+                      <a href="https://campaign.unhcr.or.kr/main.do" target="_blank" class="link">
+                        <span>Go SITE</span>
+                        <div class="svg-wrap">
+                          <svg width="32" height="32" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M8.15472 2.81673L13.8293 2.82734L13.8399 8.5019L12.758 8.5019L12.8004 4.66229L3.10242 14.3603L2.29631 13.5542L11.9943 3.85618L8.15472 3.89861L8.15472 2.81673Z" fill="currentColor"></path></svg>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                  <ul class="toll-list">
+                    <li><span>기여도: 100%</span></li>
+                    <li><span>#css</span></li>
+                    <li><span>#js</span></li>
+                    <li><span>#Swiper</span></li>
+                  </ul>
+                  <p>JavaScript를 사용하였으며, Swiper 플러그인을 이용한 <span>반응형</span> 작업물입니다.</p>
+                </div>
+              </div>
+              <div class="video-wrap">
+                <div class="mask"></div>
+                <video loop="" autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover"><source src="./assets/img/donate.mp4" /></video>
+              </div>
+            </div>
+          </div>
+          <div class="group-pagenation">
+            <div class="pagenation_wrap">
               <ul>
-                <li class="bar">
-                  <div class="bar__metadata"><span>HTML</span><span>98%</span></div>
-                  <div class="bar__bg"><div class="bar__value" data-width="98%" style="width: 0"></div></div>
-                  <p class="bar__description">웹표준의 기본 개념을 숙지하고 있으며, 태그 명령어 코딩이 가능합니다.</p>
-                </li>
-                <li class="bar">
-                  <div class="bar__metadata"><span>CSS</span><span>90%</span></div>
-                  <div class="bar__bg"><div class="bar__value" data-width="90%" style="width: 0"></div></div>
-                  <p class="bar__description">다양한 CSS 선택자를 사용하여 디자인 표현작업이 가능합니다.</p>
-                </li>
-                <li class="bar">
-                  <div class="bar__metadata"><span>JavaScript & Jquery</span><span>80%</span></div>
-                  <div class="bar__bg"><div class="bar__value" data-width="80%" style="width: 0"></div></div>
-                  <p class="bar__description">사용자 정의 함수를 이해하고 일부 소스 분석과 편집 할 수 있습니다.</p>
-                </li>
-                <li class="bar">
-                  <div class="bar__metadata"><span>TypeScript</span><span>70%</span></div>
-                  <div class="bar__bg"><div class="bar__value" data-width="80%" style="width: 0"></div></div>
-                  <p class="bar__description">버그를 줄이기 위해 TypeScript를 사용하여 변수 유형, 함수 반환 유형 및 매개변수 유형을 정의할 수 있습니다.</p>
-                </li>
-                <li class="bar">
-                  <div class="bar__metadata"><span>React</span><span>50%</span></div>
-                  <div class="bar__bg"><div class="bar__value" data-width="50%" style="width: 0"></div></div>
-                  <p class="bar__description">재사용 가능한 구성 요소, 상태 관리 및 후크를 사용하여 UI/UX를 동적으로 구성할 수 있습니다.</p>
-                </li>
-                <li class="bar">
-                  <div class="bar__metadata"><span>UIUX Design</span><span>85%</span></div>
-                  <div class="bar__bg"><div class="bar__value" data-width="85%" style="width: 0"></div></div>
-                  <p class="bar__description">아이콘 및 UIUX디자인을 제작할 수 있으며, 프로토타입을 설계 할 수 있습니다.</p>
-                </li>
+                <li>01</li>
+                <li>02</li>
+                <li>03</li>
+                <li>04</li>
+                <li>05</li>
+                <li>06</li>
               </ul>
-            </section>
-            <section class="skills__tools">
-              <h3 class="skills__title">Tools</h3>
-              <ul class="skills__lists">
-                <li class="skills__list">
-                  <img class="skills__img" src="images/visualstudio.svg" alt="visualstudio" />
-                  <span> Visual Studio Code</span>
-                </li>
-                <li class="skills__list">
-                  <img class="skills__img" src="images/w5.svg" alt="Websquare" />
-                  <span>Websquare</span>
-                </li>
-                <li class="skills__list">
-                  <img class="skills__img" src="images/ps.svg" alt="photoshop" />
-                  <span>Photoshop</span>
-                </li>
-                <li class="skills__list">
-                  <img class="skills__img" src="images/ai.svg" alt="illustrator" />
-                  <span>Illustrator</span>
-                </li>
-                <li class="skills__list">
-                  <img class="skills__img" src="images/figma.svg" alt="figma" />
-                  <span>Figma</span>
-                </li>
-              </ul>
-            </section>
-            <section class="skills__etc">
-              <h3 class="skills__title">Etc</h3>
-              <ul class="skills__lists">
-                <li class="skills__list">
-                  <img class="skills__img" src="images/github.svg" alt="github" />
-                  <span>Git</span>
-                </li>
-                <li class="skills__list">
-                  <img class="skills__img" src="images/scss.svg" alt="scss" />
-                  <span>Scss</span>
-                </li>
-                <li class="skills__list">
-                  <img class="skills__img" src="images/math.svg" alt="math" />
-                  <span>Math</span>
-                </li>
-              </ul>
-            </section>
+            </div>
+            <span>Main project</span>
+            <span class="m-text">Main.</span>
           </div>
         </div>
       </section>
-      <!-- Work -->
-      <section id="work" class="section" data-scroll>
-        <div class="max-container">
-          <h2 class="title">My Work</h2>
-          <div class="content">
-            <ul class="categories">
-              <li>
-                <button class="category category--selected" data-category="all">All <span class="category-count">8</span></button>
-              </li>
-              <li>
-                <button class="category" data-category="publish">Publish<span class="category-count">5</span></button>
-              </li>
-              <li>
-                <button class="category" data-category="uiux">UIUX<span class="category-count">3</span></button>
-              </li>
-            </ul>
-            <ul class="projects">
-              <li class="project" data-type="publish">
-                <a href="https://dahee0401.github.io/sampyo/" target="_blank">
-                  <img src="images/sampyo.png" alt="sampyo" class="project__img" />
-                  <div class="project__metadata">
-                    <h3 class="project__title">SAMPYO</h3>
-                    <p class="project__description">Clone Coding with HTML, CSS, JS</p>
-                  </div>
-                </a>
-              </li>
-              <li class="project" data-type="publish">
-                <a href=" https://dahee0401.github.io/ppaikdabang/" target="_blank">
-                  <img src="images/ppaik.png" alt="ppaik" class="project__img" />
-                  <div class="project__metadata">
-                    <h3 class="project__title">PPAIK</h3>
-                    <p class="project__description">Clone Coding with HTML, CSS, JS</p>
-                  </div>
-                </a>
-              </li>
-              <li class="project" data-type="publish">
-                <a href="https://dahee0401.github.io/kakao/" target="_blank">
-                  <img src="images/kakao.png" alt="kakao" class="project__img" />
-                  <div class="project__metadata">
-                    <h3 class="project__title">KAKAO</h3>
-                    <p class="project__description">Clone Coding with HTML, SCSS, JS</p>
-                  </div>
-                </a>
-              </li>
-              <li class="project" data-type="publish">
-                <a href="https://dahee0401.github.io/090factory/" target="_blank">
-                  <img src="images/foctory.png" alt="factory" class="project__img" />
-                  <div class="project__metadata">
-                    <h3 class="project__title">FACTORY</h3>
-                    <p class="project__description">Clone Coding with HTML, CSS, JS</p>
-                  </div>
-                </a>
-              </li>
-              <li class="project" data-type="publish">
-                <a href="https://campaign.unhcr.or.kr/main.do" target="_blank">
-                  <img src="images/unhr.png" alt="unhr" class="project__img" />
-                  <div class="project__metadata">
-                    <h3 class="project__title">UNHR</h3>
-                    <p class="project__description">Procjects with HTML, CSS, JS, Plugin</p>
-                  </div>
-                </a>
-              </li>
-              <li class="project" data-type="uiux">
-                <a href="https://www.figma.com/design/AWv3TEGCAgUUpYPJLSCg5X/%ED%95%A0%EC%9D%BC%EA%B4%80%EB%A6%AC%EC%95%B1?node-id=0-1&t=sQAF2rqrFLEkPXSz-1" target="_blank">
-                  <img src="images/todo-app.png" alt="todo app" class="project__img" />
-                  <div class="project__metadata">
-                    <h3 class="project__title">Todo management Application</h3>
-                    <p class="project__description">Procjects with Figma</p>
-                  </div>
-                </a>
-              </li>
-              <li class="project" data-type="uiux">
-                <a href="https://www.figma.com/design/EIyDZnuH78X3csIhiAdnD8/%EC%9D%8C%EC%95%85%EC%95%B1?node-id=0-1&t=FYDDxjc62s0O8B82-1" target="_blank">
-                  <img src="images/music-app.png" alt="music app" class="project__img" />
-                  <div class="project__metadata">
-                    <h3 class="project__title">Music Application</h3>
-                    <p class="project__description">Procjects with Figma</p>
-                  </div>
-                </a>
-              </li>
-              <li class="project" data-type="uiux">
-                <a href="https://www.figma.com/design/2rz8ner1cFWNOxrAQYTfEG/%EC%87%BC%ED%95%91%EB%AA%B0?node-id=0-1&t=TUj668TWgc8Bxu0K-1" target="_blank">
-                  <img src="images/shoppingmall-app.png" alt="shoppingmall app" class="project__img" />
-                  <div class="project__metadata">
-                    <h3 class="project__title">Shopping Application</h3>
-                    <p class="project__description">Procjects with Figma</p>
-                  </div>
-                </a>
-              </li>
-            </ul>
+      <section class="sc-sideproject" id="scSide">
+        <h2>UIUX design</h2>
+        <p class="top-text">Figma를 활용한 UIUX 디자인 작업물 입니다.</p>
+        <div class="flex-wrap">
+          <div class="img-inner todo">
+            <a href="https://www.figma.com/design/AWv3TEGCAgUUpYPJLSCg5X/%ED%95%A0%EC%9D%BC%EA%B4%80%EB%A6%AC%EC%95%B1?node-id=0-1&t=sQAF2rqrFLEkPXSz-1" target="_blank" class="img-wrap mouse-event">
+              <div class="img img-event"></div>
+              <div class="mask"></div>
+              <span class="img-logo">Todo-app</span>
+            </a>
+          </div>
+          <div class="img-inner music">
+            <a href="https://www.figma.com/design/EIyDZnuH78X3csIhiAdnD8/%EC%9D%8C%EC%95%85%EC%95%B1?node-id=0-1&t=FYDDxjc62s0O8B82-1" target="_blank" class="img-wrap mouse-event">
+              <div class="img img-event"></div>
+              <div class="mask"></div>
+              <div class="img-logo">Music-app</div>
+            </a>
+          </div>
+          <div class="img-inner shopping">
+            <a href="https://www.figma.com/design/2rz8ner1cFWNOxrAQYTfEG/%EC%87%BC%ED%95%91%EB%AA%B0?node-id=0-1&t=TUj668TWgc8Bxu0K-1" target="_blank" class="img-wrap mouse-event">
+              <div class="img img-event"></div>
+              <div class="mask"></div>
+              <span class="img-logo">Shopping-app</span>
+            </a>
           </div>
         </div>
       </section>
-      <!-- Design -->
-      <section id="design" class="section" data-scroll>
-        <div class="max-container">
-          <h2 class="title">Design Contents</h2>
-          <div class="content">
-            <ul class="box_gallery_row">
-              <li class="gallery__thumbnail thumb1" style="transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1); will-change: transform">
-                <div class="gallery__thumbnail_content">
-                  <h3>Promotion Event</h3>
-                  <p>Photoshop</p>
-                </div>
-                <a target="_blank" href="./images/big1.jpg">
-                  <img src="./images/design1.png" alt="갤러리_썸네일1" />
-                </a>
-              </li>
-              <li class="gallery__thumbnail thumb2" style="transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1); will-change: transform">
-                <div class="gallery__thumbnail_content">
-                  <h3>Detail page</h3>
-                  <p>Photoshop</p>
-                </div>
-                <a target="_blank" href="./images/big2.jpg">
-                  <img src="./images/design2.png" alt="갤러리_썸네일2" />
-                </a>
-              </li>
-              <li class="gallery__thumbnail thumb3" style="transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1); will-change: transform">
-                <div class="gallery__thumbnail_content">
-                  <h3>Card News</h3>
-                  <p>Photoshop</p>
-                </div>
-                <a target="_blank" href="./images/big3.jpg">
-                  <img src="./images/design3.png" alt="갤러리_썸네일3" />
-                </a>
-              </li>
-              <li class="gallery__thumbnail thumb4" style="transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1); will-change: transform">
-                <div class="gallery__thumbnail_content">
-                  <h3>Banner design</h3>
-                  <p>Photoshop</p>
-                </div>
-                <a target="_blank" href="./images/big4.jpg">
-                  <img src="./images/design4.png" alt="갤러리_썸네일4" />
-                </a>
-              </li>
-            </ul>
+      <section class="sc-javascript" id="scJavascript">
+        <h2>/ JavaScript</h2>
+
+        <ul class="project-list">
+          <li class="project-item mouse-event">
+            <a href="javascript:void(0)">
+              <div class="col-left">
+                <strong>슬라이드 플러그인 제작</strong>
+                <span>/ 2023</span>
+              </div>
+              <div class="col-right">
+                <p>프로젝트를 하며 Swiper 무한반복, 오토플레이, 버튼, 페이지네이션, 슬라이드 개수, 레이아웃, 반응형에 따른 슬라이드 등 다양한 기능을 사용할 수 있습니다.</p>
+              </div>
+              <div class="item-img">
+                <img src="./assets/img/swiper.png" alt="code" />
+              </div>
+            </a>
+          </li>
+          <li class="project-item mouse-event">
+            <a href="javascript:void(0)">
+              <div class="col-left">
+                <strong>React를 활용한 publish</strong>
+                <span>/ 2024</span>
+              </div>
+              <div class="col-right">
+                <p>React로 컴포넌트 및 UIUX 구성을 할 수 있습니다.</p>
+              </div>
+              <div class="item-img">
+                <img src="./assets/img/react.png" alt="react" />
+              </div>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer id="scContact" class="footer">
+      <h2>Jeong dahee</h2>
+      <div class="group-bottom">
+        <div class="col-left">
+          <div class="info-box">
+            <a href="mailto:dhjl13@naver.com">E-mail: dhjl13@naver.com</a>
+            <a href="tel:01024227600">Phone: 010-8239-5523</a>
+            <div class="sns-list">
+              <a href="https://www.notion.so/208113ab63144e85b5534fb6f3e88a5e" target="_blank"><img src="./assets/img/notion.png" alt="notion" /></a>
+              <a href="https://github.com/dahee0401" target="_blank"><img src="./assets/img/github.png" alt="github" /></a>
+            </div>
           </div>
         </div>
-      </section>
-      <div id="overlay">
-        <div class="container">
-          <ul class="slide">
-            <li>
-              <img class="gallery__big_photo" src="" alt="갤러리사진" />
-            </li>
-          </ul>
-          <button class="close">
-            <i class="fa-solid fa-circle-xmark"></i>
-          </button>
+        <div class="col-right">
+          <div class="producer">
+            <div class="group-producer">
+              <span>&copy; 2024</span>
+            </div>
+            <a href="#">Jeong dahee All Rights Reserved</a>
+          </div>
         </div>
       </div>
-      <!-- Arrow up -->
-      <aside>
-        <a class="arrow-up" href="#home" title="back to top">
-          <i class="fa-solid fa-arrow-up"></i>
-        </a>
-      </aside>
-    </main>
-    <!-- Footer -->
-    <footer id="contact" class="section" data-scroll>
-      <div class="max-container">
-        <h2 class="title">Let&#39;s talk</h2>
-        <p class="description">ekgml5233@gmail.com</p>
-        <div class="content">
-          <ul class="contact__links">
-            <li>
-              <a href="https://github.com/dahee0401" target="_blank" title="my github link" class="contact__link">
-                <i class="fa-brands fa-github"></i>
-              </a>
-            </li>
-            <li>
-              <a href="mailto:ekgml5233@gmail.com" target="_blank" title="my email link" class="contact__link">
-                <i class="fa-solid fa-envelope"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.notion.so/208113ab63144e85b5534fb6f3e88a5e" target="_blank" title="my study blog" class="contact__link notion-ico">
-                <i class="notion"></i>
-              </a>
-            </li>
-          </ul>
-          <p>©Dahee - All rights reserved</p>
+      <div class="bg">
+        <div class="video-wrap">
+          <video loop="" autoplay="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
+            <source src="./assets/img/universe.mp4" data-wf-ignore="true" />
+            <source src="./assets/img/universe.webm" data-wf-ignore="true" />
+          </video>
         </div>
+        <div class="video-overlay"></div>
       </div>
     </footer>
   </body>

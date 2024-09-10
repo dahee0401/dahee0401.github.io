@@ -1,0 +1,201 @@
+.gnb {
+  position: fixed;
+  bottom: 2.5em;
+  left: 50%;
+  transform: translateX(-50%);
+  align-items: center;
+  ul {
+    display: flex;
+    gap: 0.25em;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(20px);
+    background-color: rgba(16, 18, 20, 0.35);
+    border-radius: 1em;
+    padding: 0.5em;
+    li {
+      letter-spacing: 0.02em;
+      font-size: 0.9em;
+      font-weight: 300;
+
+      @include tablets {
+        font-size: 1.1em;
+      }
+
+      a {
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        background-color: rgba(255, 255, 255, 0);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 0.5em;
+        padding: 0.5em 2em 0.6em;
+        transition: background 0.5s ease-in-out;
+      }
+      &:last-child a {
+        border-color: $main-color;
+      }
+      &:hover a {
+        background-color: #fff;
+        color: #101214;
+      }
+
+      &:hover:last-child a {
+        background-color: $main-color;
+        border-color: #1c8946;
+        color: #ffffff;
+      }
+    }
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.m-gnb-wrap {
+  display: none;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+
+  @include desktop {
+    display: none;
+  }
+  @include tablets {
+    display: none;
+  }
+  @include mobile {
+    display: flex;
+  }
+
+  .m-gnb {
+    position: fixed;
+    z-index: 2;
+    bottom: 4em;
+    background-color: rgba(16, 18, 20, 0.35);
+    backdrop-filter: blur(20px);
+    gap: 1.5em;
+
+    @include mobile {
+      display: flex;
+      padding: 1.5em;
+      border-radius: 4em;
+      button {
+        @include mobile {
+          flex: 1;
+          display: flex;
+          border-radius: 2.5em;
+          padding: 2.4em 6em 2.6em 6em;
+          color: #fff;
+          background-color: rgba(255, 255, 255, 0);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+
+          .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2em;
+
+            span {
+              font-size: 4em;
+              letter-spacing: 0.02em;
+              font-weight: 300;
+              line-height: 1.5;
+            }
+            svg {
+              width: 5em;
+              height: 5em;
+            }
+          }
+          &.on .menu {
+            display: none;
+          }
+          &.on .close {
+            display: flex;
+          }
+          .close {
+            display: none;
+          }
+        }
+      }
+      .talk {
+        @include mobile {
+          display: flex;
+          flex: 1;
+          gap: 4em;
+          border-radius: 2.5em;
+          padding: 2.4em 6.3em 2.6em;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-color: $main-color;
+          span {
+            font-size: 4em;
+            letter-spacing: 0.02em;
+            font-weight: 300;
+            line-height: 1.5;
+          }
+        }
+      }
+    }
+  }
+}
+
+.open-menu {
+  display: none;
+
+  @include desktop {
+    display: none;
+  }
+  @include tablets {
+    display: none;
+  }
+
+  @include mobile {
+    transform: translateY(100%);
+    display: block;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    backdrop-filter: blur(20px);
+    background-color: rgba(16, 18, 20, 0.35);
+    border-radius: 5em 5em 0 0;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    .m-menu-list {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 5em 5em 24em;
+      a {
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        padding: 3em 1em;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.2s;
+        &:hover {
+          opacity: 0.5;
+        }
+        span {
+          font-size: 4.5em;
+          font-weight: 400;
+          line-height: 1.75;
+          letter-spacing: 0.02em;
+        }
+        i {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 8em;
+          height: 8em;
+          border-radius: 2.5em;
+          border: 1px solid rgba(255, 255, 255, 0.5);
+          svg {
+            width: 3em;
+          }
+        }
+      }
+    }
+  }
+}

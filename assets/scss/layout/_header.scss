@@ -1,0 +1,137 @@
+.sc-fixation {
+  display: flex;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+
+  .logo {
+    display: flex;
+    position: absolute;
+    top: 2.5em;
+    left: 4em;
+
+    @include tablets {
+      top: 2.9em;
+    }
+    @include mobile {
+      top: 8em;
+    }
+
+    span {
+      font-size: 1.6em;
+
+      @include mobile {
+        font-size: 6em;
+      }
+    }
+  }
+  .group-producer {
+    display: flex;
+    color: #fff;
+    height: 3em;
+    gap: 0.7em;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    top: 2.5em;
+    opacity: 0;
+    span {
+      line-height: 1.7;
+      letter-spacing: 0.02em;
+      font-size: 1.1em;
+      font-weight: 300;
+
+      @include tablets {
+        font-size: 1.2em;
+      }
+    }
+
+    @include mobile {
+      display: none;
+    }
+
+    .left {
+      font-weight: 400;
+      sub {
+        top: -0.5em;
+        margin-left: 3px;
+        vertical-align: baseline;
+        font-size: 75%;
+        position: relative;
+      }
+    }
+  }
+  .time-area {
+    display: flex;
+    transform: scale(0.8);
+    flex-direction: column;
+    position: absolute;
+    top: 2.5em;
+    right: 3em;
+
+    @include mobile {
+      top: 5em;
+      right: 2em;
+    }
+
+    .inner {
+      opacity: 1;
+      display: flex;
+      align-items: center;
+      margin-top: -0.2em;
+      margin-bottom: -0.2em;
+      letter-spacing: 0.02em;
+      font-size: 1.2em;
+      font-weight: 300;
+      line-height: 1.7;
+
+      @include mobile {
+        margin-top: -0.8em;
+        margin-bottom: -0.8em;
+      }
+
+      em {
+        width: 2.6em;
+
+        @include mobile {
+          width: 2.3em;
+          font-size: 4em;
+        }
+      }
+      .time {
+        width: 4.5em;
+
+        @include mobile {
+          width: 4.3em;
+          font-size: 4em;
+        }
+      }
+      .dot {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1.35em;
+        height: 1.35em;
+
+        @include mobile {
+          width: 3.5em;
+          height: 3.5em;
+        }
+        &-in {
+          width: 0.5em;
+          height: 0.5em;
+          // background: #fff;
+          background-color: $main-color;
+          border-radius: 10em;
+
+          @include mobile {
+            width: 2em;
+            height: 2em;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,224 @@
+.footer {
+  display: flex;
+  gap: 6em;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  padding: 15em 12em 15em 12em;
+  position: relative;
+  overflow: hidden;
+
+  @include tablets {
+    padding: 10em 5em 15em;
+  }
+  @include mobile {
+    gap: 8em;
+    padding: 0em 5em 24em;
+  }
+
+  h2 {
+    z-index: 2;
+    position: relative;
+    letter-spacing: -0.025em;
+    font-size: 4em;
+    font-weight: 400;
+    line-height: 1;
+    font-family: "Pretendard", sans-serif;
+
+    @include mobile {
+      font-size: 7em;
+    }
+  }
+  .group-bottom {
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+
+    @include mobile {
+      gap: 8em;
+      flex-direction: column;
+    }
+
+    .col-left {
+      flex-direction: column;
+      flex: 1;
+      display: flex;
+      gap: 3em;
+      justify-content: space-between;
+      width: 25em;
+      letter-spacing: 0.03em;
+      font-size: 1.2em;
+      font-weight: 400;
+      line-height: 1.7;
+
+      @include mobile {
+        width: 100%;
+        gap: 6em;
+      }
+      .info-box {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+        a {
+          @include desktop {
+            font-size: 1em;
+          }
+          @include tablets {
+            font-size: 1.2em;
+          }
+          @include mobile {
+            font-size: 4em;
+            line-height: 1.5;
+          }
+        }
+        .sns-list {
+          display: flex;
+          margin-top: 1em;
+          gap: 1em;
+
+          @include mobile {
+            gap: 3em;
+            margin-top: 2em;
+          }
+          a {
+            border-radius: 100em;
+            &:hover {
+              img {
+                transform: scale(1.2);
+              }
+            }
+            img {
+              width: 2em;
+              transition: all 0.3s linear;
+
+              @include mobile {
+                width: 1.6em;
+              }
+            }
+          }
+        }
+      }
+    }
+    .col-right {
+      display: flex;
+      position: relative;
+
+      @include mobile {
+        width: 100%;
+      }
+
+      .our-story {
+        width: 8em;
+        height: 8em;
+        margin-bottom: -2em;
+        margin-left: -2em;
+        position: absolute;
+        top: -4.5em;
+        right: 0;
+
+        @include desktop {
+          width: 9em;
+          height: 9em;
+        }
+
+        @include mobile {
+          width: 25em;
+          height: 25em;
+          top: 10em;
+          right: 0;
+          margin-bottom: 0;
+          margin-left: 0;
+        }
+
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+          backdrop-filter: blur(6px);
+          background-color: rgba(255, 255, 255, 0.1);
+          border-radius: 100%;
+          letter-spacing: 0.02em;
+          font-size: 0.75em;
+          font-weight: 400;
+          line-height: 1.5em;
+
+          @include desktop {
+            font-size: 1em;
+          }
+
+          @include mobile {
+            font-size: 3.6em;
+          }
+        }
+      }
+      .producer {
+        display: flex;
+        gap: 1em;
+        opacity: 0.3;
+        letter-spacing: 0.02em;
+        font-size: 1em;
+        font-weight: 300;
+        line-height: 1.75;
+        align-items: flex-end;
+
+        @include mobile {
+          font-size: 3em;
+        }
+
+        .group-producer {
+          display: flex;
+          gap: 1em;
+
+          @include mobile {
+            flex-wrap: wrap;
+            gap: 2em;
+          }
+        }
+      }
+    }
+  }
+  .bg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    .video-wrap {
+      width: 100%;
+      height: 100%;
+      opacity: 0.3;
+      transform-style: preserve-3d;
+      transform: scale(1.5) rotateX(0) rotateY(180deg) rotate(0);
+      video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -100;
+        background-position: 50%;
+        background-size: cover;
+        margin: auto;
+        position: absolute;
+        top: -100%;
+        bottom: -100%;
+        left: -100%;
+        right: -100%;
+      }
+    }
+    .video-overlay {
+      width: 100%;
+      height: 50%;
+      background-image: linear-gradient(#1d2024, rgba(29, 32, 36, 0));
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      @include mobile {
+        height: 35%;
+      }
+    }
+  }
+}
