@@ -1,18 +1,16 @@
-
 @font-face {
-	font-family: 'Aeonik';
-	src: url(../font/63f89ac698df869a1a3076eb_Aeonik-Light.otf) format('opentype');
-	font-weight: 300;
-}
-@font-face {
-	font-family: 'Aeonik';
-	src: url(../font/63f89ac78fa23e54bccd6d83_Aeonik-Regular.otf) format('opentype');
+	font-family: 'Instrument Serif';
+	src: url(../font/InstrumentSerif-Regular.ttf) format('truetype');
+	font-style: normal;
 	font-weight: 400;
+	font-display: swap;
 }
 @font-face {
-	font-family: 'Mazius';
-	src: url(../font/63f89aa6a3a619000cf5656b_MAZIUS.otf) format('opentype');
-	font-weight: 500;
+	font-family: 'Instrument Serif';
+	src: url(../font/InstrumentSerif-Italic.ttf) format('truetype');
+	font-style: italic;
+	font-weight: 400;
+	font-display: swap;
 }
 
 @font-face {

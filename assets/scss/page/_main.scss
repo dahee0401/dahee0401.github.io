@@ -82,7 +82,7 @@
       }
       .serif {
         display: block;
-        font-family: Mazius, sans-serif;
+        font-family: "Instrument Serif", serif;
         font-size: 1.1em;
         letter-spacing: -0.1em;
       }
@@ -227,7 +227,7 @@
           font-size: 7em;
           font-weight: 400;
           line-height: 0.9;
-          text-transform: uppercase;
+          // text-transform: uppercase;
 
           @include tablets {
             font-size: 6em;
@@ -239,7 +239,7 @@
           .serif {
             display: block;
             white-space: pre-wrap;
-            font-family: "Mazius", sans-serif;
+            font-family: "Instrument Serif", serif;
             font-size: 0.5em;
             text-transform: initial;
 
@@ -676,25 +676,48 @@
           }
         }
         .img-logo {
-          display: flex;
-          justify-content: center;
-          align-items: center;
           width: 100%;
-          height: 100%;
+          height: 1em;
           position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
           z-index: 5;
+          overflow: hidden;
           font-family: "Pretendard", sans-serif;
           font-weight: 600;
-          line-height: 1.92;
+          line-height: 1;
           font-size: 2.5em;
           text-transform: uppercase;
           letter-spacing: -0.05em;
           color: #ffffff;
           // text-shadow: 1px 0.2px 1px gray;
 
+          span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            inset: 0;
+            transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+
+            &:last-child {
+              transform: translateY(100%);
+            }
+          }
+
           @include mobile {
             font-size: 8em;
           }
+        }
+
+        &:hover .img-logo span:first-child {
+          transform: translateY(-100%);
+        }
+
+        &:hover .img-logo span:last-child {
+          transform: translateY(0);
         }
         .mask {
           position: absolute;

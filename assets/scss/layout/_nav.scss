@@ -34,24 +34,47 @@
         padding: 0.5em 2em 0.6em;
         transition: background 0.5s ease-in-out;
       }
-      &:last-child a {
-        border-color: $main-color;
-      }
       &:hover a {
         background-color: #fff;
         color: #101214;
       }
 
-      &:hover:last-child a {
-        background-color: $main-color;
-        border-color: #1c8946;
-        color: #ffffff;
+      &.active a {
+        background-color: #fff;
+        color: #101214;
       }
+
     }
   }
 
   @include mobile {
     display: none;
+  }
+}
+
+.go-top {
+  position: fixed;
+  right: 2.5em;
+  bottom: 2.5em;
+  z-index: 100;
+  padding: 0.8em 1.2em;
+  color: #fff;
+  background-color: rgba(16, 18, 20, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.5em;
+  backdrop-filter: blur(20px);
+  font-size: 0.9em;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    color: #101214;
+    background-color: #fff;
+  }
+
+  @include mobile {
+    right: 4em;
+    bottom: 18em;
+    font-size: 3em;
   }
 }
 
