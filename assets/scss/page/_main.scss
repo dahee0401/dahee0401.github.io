@@ -361,20 +361,27 @@
               gap: 0.5em;
 
               > li{
-                color:#747474;
-              &:first-child {
-                color: #747474 !important;
-              }
+                color:#ccc;
+                &:first-child{
+                  color:#ccc;
+                }
                 
                 > span{
                   display:inline-block;
-                  min-width:12em;
-                  color: #d3d3d3;
+                  min-width:11em;
+                  text-align:right;
+                  font-weight: 700;
+                   color:#d3d3d3;
+                }
+
+                >i{
+                  display:inline-block;
+                  min-width: 11em;
                 }
               }
 
               & + p {
-                margin-top: 0.5em;
+                margin-top: 2em;
               }
             }
 
@@ -623,6 +630,7 @@
       max-width: 30em;
       height: 75vh;
       position: relative;
+      width: calc((100% - 2em) / 3);
       @include desktop {
         flex: 1;
         height: 66vh;
@@ -722,7 +730,8 @@
     }
 
     .todo {
-      width: 50%;
+      // width: calc((100% - 16px) / 3);
+      // width: 50%;
 
       @include mobile {
         width: 100%;
@@ -734,7 +743,7 @@
       }
     }
     .music {
-      width: 50%;
+      // width: 50%;
       margin-top: 30vh;
 
       @include mobile {
@@ -749,7 +758,7 @@
       }
     }
     .shopping {
-      width: 50%;
+      // width: 50%;
 
       @include mobile {
         width: 100%;
@@ -876,6 +885,10 @@
               width: 100%;
               font-weight: 300;
               text-align: initial;
+            }
+
+            span{
+              color:#ff5454;
             }
           }
         }
