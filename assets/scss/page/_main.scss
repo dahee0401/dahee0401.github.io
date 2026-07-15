@@ -228,7 +228,6 @@
           font-weight: 400;
           line-height: 0.9;
           // text-transform: uppercase;
-
           @include tablets {
             font-size: 6em;
           }
@@ -796,7 +795,7 @@
     }
   }
 }
-.sc-javascript {
+.sc-javascript, .sc-certificate {
   width: 100%;
   padding: 3em 12em 8em;
 
@@ -982,5 +981,11 @@
         }
       }
     }
+  }
+}
+
+.sc-certificate {
+  h2 {
+    padding-left: 0;
   }
 }

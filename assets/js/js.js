@@ -108,6 +108,7 @@ const gnbSections = [
   '.sc-mainproject',
   '#scSide',
   '#scJavascript',
+  '#scCertificate',
   '#scContact'
 ];
 
