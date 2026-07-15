@@ -43,6 +43,10 @@ document.querySelectorAll('a[href]').forEach(a => {
 // Scroll to the element in the URL's hash on load
 scrollToHash(window.location.hash);
 
+$('.go-top').on('click', function (e) {
+  scrollToHash('#scIntro', e);
+});
+
 
 
 // 마우스
@@ -95,6 +99,32 @@ ScrollTrigger.create({
     onUpdate: (self) => {
         self.direction === -1 ? showProducer.play() : showProducer.reverse()
     }
+});
+
+const gnbItems = $('.gnb li');
+const gnbSections = [
+  '#scIntro',
+  '#scAbout',
+  '.sc-mainproject',
+  '#scSide',
+  '#scJavascript',
+  '#scContact'
+];
+
+function setActiveGnb(index) {
+  gnbItems.removeClass('active').eq(index).addClass('active');
+}
+
+setActiveGnb(0);
+
+gnbSections.forEach((section, index) => {
+  ScrollTrigger.create({
+    trigger: section,
+    start: 'top center',
+    end: 'bottom center',
+    onEnter: () => setActiveGnb(index),
+    onEnterBack: () => setActiveGnb(index)
+  });
 });
 
 
