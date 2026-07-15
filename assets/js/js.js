@@ -229,6 +229,22 @@ $('.sc-javascript .item-img').each(function(i,el){
 
 gsap.registerPlugin(ScrollTrigger);
 
+$('.sc-sideproject .img-wrap').on('mouseenter', function () {
+  gsap.to($(this).find('.img'), {
+    scale: 1.15,
+    duration: 0.5,
+    ease: 'power2.out',
+    overwrite: 'auto'
+  });
+}).on('mouseleave', function () {
+  gsap.to($(this).find('.img'), {
+    scale: 1,
+    duration: 0.5,
+    ease: 'power2.out',
+    overwrite: 'auto'
+  });
+});
+
 let mm = gsap.matchMedia();
 
     mm.add("(min-width: 767px)", () => {
