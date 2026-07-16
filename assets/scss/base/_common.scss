@@ -16,7 +16,7 @@
     pointer-events: none;
     // mix-blend-mode: difference;
 
-    @include mobile{ display: none; }
+    // @include mobile{ display: none; }
 
     .curser-inner{
         display: flex;
