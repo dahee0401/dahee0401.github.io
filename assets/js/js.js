@@ -128,6 +128,33 @@ gnbSections.forEach((section, index) => {
   });
 });
 
+// About Me 텍스트 등장 효과
+const aboutTextSpans = gsap.utils.toArray(
+  '.sc-about h2 .text, .sc-about .top-text span, .sc-about .bottom-text p span'
+);
+
+gsap.fromTo(
+  aboutTextSpans,
+  {
+    opacity: 0,
+    y: 200,
+    force3D: true,
+  },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 1.1,
+    stagger: 0.15,
+    ease: 'power2.out',
+    force3D: true,
+    scrollTrigger: {
+      trigger: '.sc-about',
+      start: 'top 75%',
+      toggleActions: 'play none none reverse',
+    },
+  }
+);
+
 
 
 //실시간 시간
